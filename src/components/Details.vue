@@ -28,15 +28,6 @@
 
 <script>
 import Loader from "./Loader.vue";
-import md5 from "md5";
-
-const API_URL = "https://gateway.marvel.com:443/v1/public/";
-const publicKey = process.env.VUE_APP_MARVEL_PUBLIC_KEY;
-const privateKey = process.env.VUE_APP_MARVEL_PRIVATE_KEY;
-const ts = "1";
-const auth = `ts=${ts}&apikey=${publicKey}&hash=${md5(
-  `${ts}${privateKey}${publicKey}`
-)}`;
 
 export default {
   components: {
@@ -63,18 +54,6 @@ export default {
     },
     character() {
       return this.$store.state.selectedCharacter;
-    }
-  },
-  methods: {
-    fetchCharacter() {
-      fetch(`${API_URL}/characters/${this.$route.params.id}?${auth}`)
-        .then(res => {
-          return res.json();
-        })
-        .then(res => {
-          this.isLoading = false;
-          this.character = res.data.results[0];
-        });
     }
   }
 };

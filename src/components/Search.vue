@@ -20,7 +20,6 @@ export default {
   },
   data() {
     return {
-      characters: null,
       searchFoundData: false,
       searchCannotFoundData: false
     };
@@ -35,7 +34,6 @@ export default {
     characterSearch(term) {
       this.searchFoundData = false;
       this.searchCannotFoundData = false;
-      this.characters = null;
 
       if (term === undefined || term === "") {
         window.location.replace("/");
