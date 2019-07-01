@@ -1,17 +1,15 @@
 <template>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3 search-bar">
-      <div class="input-group">
-        <input
-          class="form-control input-lg"
-          v-model="term"
-          @keypress="handleKeyPress"
-          placeholder="Karakter ara"
-        >
-        <span class="input-group-btn">
-          <button class="btn btn-info input-lg" @click="onSearchButtonClick">Ara</button>
-        </span>
-      </div>
+  <div class="search-bar">
+    <div class="input-group">
+      <input
+        class="form-control input-lg"
+        v-model="term"
+        @keypress="handleKeyPress"
+        placeholder="Karakter ara"
+      >
+      <span class="input-group-btn">
+        <button class="btn btn-info input-lg" @click="onSearchButtonClick">Ara</button>
+      </span>
     </div>
   </div>
 </template>

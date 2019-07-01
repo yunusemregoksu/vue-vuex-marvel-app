@@ -1,18 +1,19 @@
 <template>
   <div id="app">
     <div class="container">
-      <search-bar></search-bar>
+      <navbar></navbar>
       <router-view/>
     </div>
   </div>
 </template>
 
 <script>
-import SearchBar from "./components/SearchBar.vue";
+import Navbar from "./components/Navbar";
+
 export default {
   name: "app",
   components: {
-    SearchBar
+    Navbar
   },
   data() {
     return {};
