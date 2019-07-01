@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "<vue-vuex-marvel-app>"
+  publicPath: "vue-vuex-marvel-app"
 };
